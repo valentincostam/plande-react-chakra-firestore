@@ -24,9 +24,11 @@ export default function Home({ degrees }) {
           Carreras
         </Heading>
         {degrees &&
-          degrees.map(({ id, name, slug }) => (
+          degrees.map(({ id, name, slug, universityAlias, collegeAlias }) => (
             <div key={id}>
-              <Link href={`/${slug}`}>{name}</Link>
+              <Link href={`/${slug}`}>
+                {universityAlias} {collegeAlias}: {name}
+              </Link>
             </div>
           ))}
       </main>
