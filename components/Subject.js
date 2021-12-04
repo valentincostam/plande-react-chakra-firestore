@@ -29,6 +29,7 @@ import SUBJECT_STATES from 'constants/subject-states';
 import TAGS from 'constants/tags';
 import { useContext } from 'react';
 import { CurriculumContext } from 'contexts/CurriculumContext';
+import NUMBER_OF_WEEKS_PER_ACADEMIC_YEAR from 'constants/number-of-weeks';
 
 const { DESAPROBADA, APROBADA } = SUBJECT_STATES;
 
@@ -93,9 +94,9 @@ export default function Subject({
       </HStack>
 
       {classload && (
-        <Tooltip hasArrow label={`Carga horaria semanal: ${classload} horas`}>
+        <Tooltip hasArrow label={`Carga horaria anual: ${classload} horas`}>
           <Text color={classloadColor} whiteSpace="nowrap">
-            {classload} hs
+            {Math.round(classload / NUMBER_OF_WEEKS_PER_ACADEMIC_YEAR)} hs
           </Text>
         </Tooltip>
       )}

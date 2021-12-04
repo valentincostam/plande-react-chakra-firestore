@@ -169,7 +169,7 @@ export default function Degree({ degree, subjects: subjectsWithoutState }) {
     }, true);
   };
 
-  // TODO: Prevent form calculating on every render.
+  // TODO: Is it worth it to memoize `years` with useMemo?
   const years = Array.from(Array(parseInt(degree.years)), (_, i) => i + 1);
 
   const totalSubjectsCount = subjects.length;

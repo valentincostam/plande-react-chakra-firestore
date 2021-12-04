@@ -9,6 +9,7 @@ import {
 } from '@chakra-ui/react';
 import SUBJECT_STATES from 'constants/subject-states';
 import TAGS from 'constants/tags';
+import NUMBER_OF_WEEKS_PER_ACADEMIC_YEAR from 'constants/number-of-weeks';
 
 const { CURSANDO, APROBADA } = SUBJECT_STATES;
 
@@ -24,17 +25,27 @@ export default function Stats({ subjects }) {
 
   const progress = Math.floor((passedSubjectsCount / totalSubjectsCount) * 100);
 
-  // TODO: Update when classload is yearly.
-  const currentClassload = subjects
+  const currentYearlyClassload = subjects
     .filter(({ state }) => state == CURSANDO.value)
     .reduce((totalHours, { classload }) => totalHours + parseInt(classload), 0);
 
-  const passedElectiveClassload = subjects
+  const currentWeeklyClassload =
+    currentYearlyClassload / NUMBER_OF_WEEKS_PER_ACADEMIC_YEAR;
+
+  const passedElectiveYearlyClassload = subjects
     .filter(
       ({ state, tags }) =>
         tags && tags.includes(TAGS.ELECTIVA.value) && state == APROBADA.value
     )
     .reduce((totalHours, { classload }) => totalHours + parseInt(classload), 0);
+
+  const passedElectiveWeeklyClassload =
+    passedElectiveYearlyClassload / NUMBER_OF_WEEKS_PER_ACADEMIC_YEAR;
+
+  const degreeTotalHours = subjects.reduce(
+    (total, { classload }) => total + parseInt(classload),
+    0
+  );
 
   return (
     <Box mt="10">
@@ -57,13 +68,19 @@ export default function Stats({ subjects }) {
         <GridItem>
           <StatItem
             label="Horas cursando semanalmente"
-            value={`${currentClassload} horas`}
+            value={`${currentWeeklyClassload} horas`}
           />
         </GridItem>
         <GridItem>
           <StatItem
             label="Horas electivas aprobadas"
-            value={`${passedElectiveClassload} horas`}
+            value={`${passedElectiveWeeklyClassload} horas`}
+          />
+        </GridItem>
+        <GridItem>
+          <StatItem
+            label="Total de horas de la carrera"
+            value={`${degreeTotalHours} horas`}
           />
         </GridItem>
       </Grid>
