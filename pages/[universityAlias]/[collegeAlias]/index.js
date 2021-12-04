@@ -1,22 +1,24 @@
 import { Box, Heading, Text } from '@chakra-ui/react';
 import NextLink from 'next/link';
 import { getColleges, getCollegeBySlug, getDegrees } from '@/lib/db-admin';
+import Head from 'next/head';
 
 export default function College({ college, degrees }) {
   return (
     <Box>
+      <Head>
+        <title>
+          Carreras de la {college.name} · {college.universityAlias} · Plande
+        </title>
+      </Head>
       <Text>{college.universityName}</Text>
-      <Heading as="h1">
-        {college.name} ({college.alias})
-      </Heading>
-      <ul>
-        {degrees &&
-          degrees.map(({ id, name, slug }) => (
-            <li key={id}>
-              <NextLink href={`/${slug}`}>{name}</NextLink>
-            </li>
-          ))}
-      </ul>
+      <Heading as="h1">{college.name}</Heading>
+      {degrees &&
+        degrees.map(({ id, name, slug }) => (
+          <NextLink key={id} href={`/${slug}`}>
+            {name}
+          </NextLink>
+        ))}
     </Box>
   );
 }

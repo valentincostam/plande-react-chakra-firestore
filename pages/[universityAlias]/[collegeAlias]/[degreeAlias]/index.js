@@ -10,6 +10,7 @@ import Curriculum from '@/components/Curriculum';
 import { CurriculumContext } from 'contexts/CurriculumContext';
 import Stats from '@/components/Stats';
 import StatusBar from '@/components/StatusBar';
+import Head from 'next/head';
 
 const { DESAPROBADA, APROBADA } = SUBJECT_STATES;
 
@@ -182,6 +183,12 @@ export default function Degree({ degree, subjects: subjectsWithoutState }) {
 
   return (
     <>
+      <Head>
+        <title>
+          Plan de estudios de {degree.name} · {degree.universityAlias}{' '}
+          {degree.collegeAlias} · Plande
+        </title>
+      </Head>
       <Text>
         {degree.universityAlias} {degree.collegeAlias}
       </Text>

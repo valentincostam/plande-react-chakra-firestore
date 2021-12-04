@@ -1,5 +1,6 @@
 import { Box, Heading } from '@chakra-ui/react';
 import NextLink from 'next/link';
+import Head from 'next/head';
 import {
   getUniversities,
   getUniversityBySlug,
@@ -9,17 +10,14 @@ import {
 export default function University({ university, colleges }) {
   return (
     <Box>
-      <Heading as="h1">
-        {university.name} ({university.alias})
-      </Heading>
-      <ul>
-        {colleges &&
-          colleges.map(({ id, name, slug, alias }) => (
-            <li key={id}>
-              <NextLink href={`/${slug}`}>{`${name} (${alias})`}</NextLink>
-            </li>
-          ))}
-      </ul>
+      <Head>
+        <title>Facultades de la {university.name} · Plande</title>
+      </Head>
+      <Heading as="h1">{university.name}</Heading>
+      {colleges &&
+        colleges.map(({ id, name, slug, alias }) => (
+          <NextLink key={id} href={`/${slug}`}>{`${name} (${alias})`}</NextLink>
+        ))}
     </Box>
   );
 }

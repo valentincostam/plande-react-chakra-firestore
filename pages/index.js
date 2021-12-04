@@ -6,10 +6,10 @@ export default function Home({ degrees }) {
   return (
     <div>
       <Head>
-        <title>Plande</title>
+        <title>Plande · Descubrí tu progreso en tu carrera universitaria</title>
         <meta
           name="description"
-          content="El plan de estudios de tu carrera universitaria"
+          content="Descubrí tu progreso en tu carrera universitaria"
         />
       </Head>
 
@@ -18,7 +18,7 @@ export default function Home({ degrees }) {
           Plande
         </Heading>
         <Text textAlign="center" fontSize="xl">
-          Llevá registro de tu progreso en tu carrera universitaria
+          Descubrí tu progreso en tu carrera universitaria
         </Text>
         <Heading as="h2" size="lg" mt="8">
           Carreras
