@@ -41,11 +41,7 @@ export default function AddSubjectModal({ degree, subjects }) {
   const { user } = useAuth();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const { mutate } = useSWRConfig();
-  const { register, handleSubmit, reset, watch } = useForm();
-  // const [isOptional, isIntegrative] = watch([
-  //   'requirementsForAttending',
-  //   'requirementsForPassing',
-  // ]);
+  const { register, handleSubmit, reset } = useForm();
   const toast = useToast();
 
   const onSubmit = async (newSubject) => {
@@ -98,22 +94,22 @@ export default function AddSubjectModal({ degree, subjects }) {
   return (
     <>
       <Button onClick={onOpen} mb="4">
-        Add subject
+        Agregar materia
       </Button>
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
         <ModalContent as="form" onSubmit={handleSubmit(onSubmit)}>
-          <ModalHeader>Add subject</ModalHeader>
+          <ModalHeader>Agregar materia</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <FormControl id="name">
-              <FormLabel>Name</FormLabel>
+              <FormLabel>Nombre</FormLabel>
               <Input {...register('name')} />
             </FormControl>
 
             <FormControl id="year">
-              <FormLabel>Year</FormLabel>
+              <FormLabel>Año</FormLabel>
               <Select
                 {...register('year', { value: '1' })}
                 placeholder="Select a year"
@@ -127,21 +123,19 @@ export default function AddSubjectModal({ degree, subjects }) {
             </FormControl>
 
             <FormControl id="semester">
-              <FormLabel>Semester</FormLabel>
+              <FormLabel>Cuatrimestre</FormLabel>
               {/* TODO: Set default value. */}
               <RadioGroup>
-                {/* <Stack direction="row"> */}
                 {Object.values(SEMESTERS).map(({ value, text }) => (
                   <Radio key={value} {...register('semester')} value={value}>
                     {text}
                   </Radio>
                 ))}
-                {/* </Stack> */}
               </RadioGroup>
             </FormControl>
 
             <FormControl id="classload">
-              <FormLabel>Classload</FormLabel>
+              <FormLabel>Carga horaria anual</FormLabel>
               <NumberInput defaultValue={1} min={1}>
                 <NumberInputField {...register('classload')} />
                 <NumberInputStepper>
@@ -164,7 +158,7 @@ export default function AddSubjectModal({ degree, subjects }) {
 
             {subjects.length > 0 && (
               <>
-                <Text fontWeight="500">Requirements for attending</Text>
+                <Text fontWeight="500">Requisitos para cursar</Text>
                 <UnorderedList m="0">
                   {subjects.map(({ id, name }, index) => (
                     <ListItem
@@ -208,7 +202,7 @@ export default function AddSubjectModal({ degree, subjects }) {
 
             {subjects.length > 0 && (
               <>
-                <Text fontWeight="500">Requirements for passing</Text>
+                <Text fontWeight="500">Requisitos para aprobar</Text>
                 <UnorderedList m="0">
                   {subjects.map(({ id, name }, index) => (
                     <ListItem
@@ -235,7 +229,8 @@ export default function AddSubjectModal({ degree, subjects }) {
                       </Checkbox>
                       <Select
                         {...register(
-                          `requirementsForPassing.${index}.requiredState`
+                          `requirementsForPassing.${index}.requiredState`,
+                          { value: APROBADA.value }
                         )}
                         w="150px"
                       >
@@ -253,10 +248,10 @@ export default function AddSubjectModal({ degree, subjects }) {
 
           <ModalFooter>
             <Button variant="ghost" onClick={onClose} mr="2">
-              Close
+              Cerrar
             </Button>
             <Button colorScheme="gray" type="submit">
-              Add
+              Agregar
             </Button>
           </ModalFooter>
         </ModalContent>

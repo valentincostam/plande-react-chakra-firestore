@@ -10,6 +10,7 @@ import Curriculum from '@/components/Curriculum';
 import { CurriculumContext } from 'contexts/CurriculumContext';
 import Stats from '@/components/Stats';
 import StatusBar from '@/components/StatusBar';
+import Head from 'next/head';
 
 const { DESAPROBADA, APROBADA } = SUBJECT_STATES;
 
@@ -169,7 +170,7 @@ export default function Degree({ degree, subjects: subjectsWithoutState }) {
     }, true);
   };
 
-  // TODO: Prevent form calculating on every render.
+  // TODO: Is it worth it to memoize `years` with useMemo?
   const years = Array.from(Array(parseInt(degree.years)), (_, i) => i + 1);
 
   const totalSubjectsCount = subjects.length;
@@ -182,6 +183,12 @@ export default function Degree({ degree, subjects: subjectsWithoutState }) {
 
   return (
     <>
+      <Head>
+        <title>
+          Plan de estudios de {degree.name} · {degree.universityAlias}{' '}
+          {degree.collegeAlias} · Plande
+        </title>
+      </Head>
       <Text>
         {degree.universityAlias} {degree.collegeAlias}
       </Text>

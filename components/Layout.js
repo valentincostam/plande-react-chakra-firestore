@@ -24,6 +24,7 @@ export default function Layout({ children }) {
   return (
     <>
       <HStack justify="space-between" align="center" p="4" spacing="4" h="16">
+        {/* TODO: Is this the right way to check permissions? */}
         {auth?.user && auth.user.role == 'admin' && (
           <Menu display={['block', 'none', 'none', 'none']}>
             <MenuButton

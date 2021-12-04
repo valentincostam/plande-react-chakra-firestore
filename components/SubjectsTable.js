@@ -22,11 +22,11 @@ export default function SubjectsTable({ subjects, onDelete }) {
     <Table variant="simple">
       <Thead>
         <Tr>
-          <Th>Name</Th>
-          <Th>Year</Th>
-          <Th>Semester</Th>
-          <Th>Classload</Th>
-          <Th>Actions</Th>
+          <Th>Nombre</Th>
+          <Th>Año</Th>
+          <Th>Cuatrimestre</Th>
+          <Th>Carga horaria</Th>
+          <Th>Acciones</Th>
         </Tr>
       </Thead>
       <Tbody>
@@ -46,14 +46,14 @@ export default function SubjectsTable({ subjects, onDelete }) {
                 {isIntegrative && '(Integrative)'}
               </Td>
               <Td>{year}</Td>
-              <Td>{['Annual', 'First', 'Second'][semester]}</Td>
+              <Td>{semester}</Td>
               <Td>{classload}</Td>
               <Td>
                 <Button
                   isLoading={loadingStatuses[id]}
                   onClick={() => onDeleteSubject(id)}
                 >
-                  Delete
+                  Eliminar
                 </Button>
               </Td>
             </Tr>
