@@ -1,8 +1,13 @@
 # Plande
 
-> Keep track of your college degree progress.
+<img align="right" width="300" src="plande-demo.gif" style="margin-left: 20px">
 
+Keep track of your college degree progress.
+
+[plande.app](https://plande.app
+)
 ## 📜 Description
+
 
 Plande is your college degree curriculum made simple and interactive.
 
@@ -39,26 +44,40 @@ multi-platform sign-in
 ### Steps
 
 1. [Fork this repository and clone your fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
+
     ```
     git clone https://github.com/<your-username>/plande.git
     ``` 
+
 2. Set up Firebase:
+
     1. [Create a Firebase project](https://firebase.google.com/docs/web/setup#create-project) and [register a new web app](https://firebase.google.com/docs/web/setup#register-app).
+
     2. [Generate a new private key file for the Firebase Admin SDK](https://firebase.google.com/docs/admin/setup#initialize-sdk).
+
     3. [Enable Google Sign-In](https://firebase.google.com/docs/auth/web/google-signin#before_you_begin) in the Firebase console.
+
     4. [Create a Cloud Firestore database](https://firebase.google.com/docs/firestore/quickstart#create) (in _Test mode_ or use the rules in the `firestore.rules` file.)
+
 3. Copy the `API_KEY`, `AUTH_DOMAIN` and `PROJECT_ID` values from the [Firebase Web SDK config object](https://firebase.google.com/docs/web/learn-more#config-object) and paste them in the `.env.template` file.
+
 4. Copy the `PRIVATE_KEY` (*) and `CLIENT_EMAIL` values from the Firebase Admin SDK private key JSON file and paste them in the `.env.template` file.
     > ⚠️ Keep the quotes (`"`) and line breaks (`\n`) in the `PRIVATE_KEY`. Don't remove them.
+
 5. Rename the `.env.template` file to `.env.local`.
+
 6. Install the project dependencies.
+
     ```bash
     yarn install # or npm install
     ```
-7. Start the application in development mode
+
+7. Start the application in development mode.
+
     ```bash
     yarn dev # or npm run dev
     ```
+
 8. Go to http://localhost:3000 in your browser.
 
 ### Make yourself administrator
@@ -96,6 +115,8 @@ And, of course, you can help with code:
     git push origin my-new-feature
     ```
 5. Submit a [pull request](https://github.com/valentincostam/plande/pulls).
+
+
 
 
 ## 📝 License
