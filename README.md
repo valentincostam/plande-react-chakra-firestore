@@ -98,25 +98,30 @@ Contributions, issues and feature requests are welcome. Feel free to check [issu
 And, of course, you can help with code:
 
 1. [Fork this repository and clone your fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
+
     ```
     git clone https://github.com/<your-username>/plande.git
     ```
+
 2. Create your feature/fix branch.
+
     ```
     git checkout -b my-new-feature
     ```
+
 3. Commit your changes.
+
     ```
     git commit -am 'Add some feature'
     ```
+
 4. Push to the branch.
+
     ```
     git push origin my-new-feature
     ```
+
 5. Submit a [pull request](https://github.com/valentincostam/plande/pulls).
-
-
-
 
 ## 📝 License
 
