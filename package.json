@@ -1,7 +1,9 @@
 {
-  "name": "nextjs",
+  "name": "plande",
   "version": "1.0.0",
   "private": true,
+  "author": "Valentín Costa <valentincostam@gmail.com> (https://valentincosta.com)",
+  "license": "MIT",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
