@@ -1,34 +1,84 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Plande
 
-## Getting Started
+> Keep track of your college degree progress.
 
-First, run the development server:
+## Description
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Plande is your college degree curriculum made simple and interactive.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+By letting you mark whether you have passed the courses of your degree, it helps you to:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+- 📏 Keep track of your progress, showing your degree completion percentage.
+- 🧮 Know your current weekly classload, the number of passed courses, and other stats.
+- 📅 Plan and organize yourself ahead of time by allowing you to simulate possible scenarios.
+- 💪 Motivate yourself by showing you how far got and how much is left.
+- 🫂 Share your achievements with non-academic people by having a minimalist and user-friendly interface.
+- 📱 Have the curriculum and your progress everywhere at anytime. 
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Instead of dealing with traditional curriculum tables (like [this one](http://www.frcu.utn.edu.ar/wp-content/uploads/2018/07/Plan_ISI_2015.pdf) and [this other one](https://fcytcdelu.uader.edu.ar/sistemas)) and getting frustrated for trying to understand them, just use [Plande](https://plande.com) and enjoy.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+For those who know me, think of Plande as the modern version of [isi](https://valentincosta.com/isi/), simpler, faster, that can save your progress in the cloud and support other college degrees.
 
-## Learn More
+## Built with
 
-To learn more about Next.js, take a look at the following resources:
+- [React](https://reactjs.org/docs/getting-started.html) - A JavaScript library for building user interfaces
+- [Next.js](https://nextjs.org/docs/getting-started) - The React framework
+for production
+- [Chakra UI](https://chakra-ui.com/docs/getting-started) - Simple, modular and accessible component library
+- [Firebase Authentication](https://firebase.google.com/docs/auth) - Simple, free
+multi-platform sign-in
+- [Cloud Firestore](https://firebase.google.com/docs/firestore) - NoSQL database built for global apps
+- [Vercel](https://vercel.com/docs) - Platform for frontend frameworks and static sites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Running the project locally
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Requirement
 
-## Deploy on Vercel
+- [Node.js 12.22.0](https://nodejs.org/en/) or later
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Steps
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. [Fork this repository and clone your fork](https://docs.github.com/en/get-started/quickstart/fork-a-repo).
+
+    ```
+    git clone https://github.com/<your-username>/plande.git
+    ``` 
+
+2. Set up Firebase:
+
+    1. [Create a Firebase project](https://firebase.google.com/docs/web/setup#create-project) and [register a new web app](https://firebase.google.com/docs/web/setup#register-app).
+    2. [Generate a new private key file for the Firebase Admin SDK](https://firebase.google.com/docs/admin/setup#initialize-sdk).
+    3. [Enable Google Sign-In](https://firebase.google.com/docs/auth/web/google-signin#before_you_begin) in the Firebase console.
+    4. [Create a Cloud Firestore database](https://firebase.google.com/docs/firestore/quickstart#create) (in _Test mode_ or use the rules in the `firestore.rules` file.)
+3. Copy the `API_KEY`, `AUTH_DOMAIN` and `PROJECT_ID` values from the [Firebase Web SDK config object](https://firebase.google.com/docs/web/learn-more#config-object) and paste them in the `.env.template` file.
+4. Copy the `PRIVATE_KEY` and `CLIENT_EMAIL` values from the Firebase Admin SDK private key JSON file and paste them in the `.env.template` file.
+5. Rename the `.env.template` file to `.env.local`.
+6. Install the project dependencies.
+
+    ```bash
+    yarn install # or npm install
+    ```
+
+7. Start the application in development mode
+
+    ```bash
+    yarn dev # or npm run dev
+    ```
+
+8. Go to http://localhost:3000 in your browser.
+
+### Make yourself administrator
+
+In order to add new _universities_, _colleges_, _degrees_ and _subjects_ to Plande, you need to be an **admin** user.
+
+1. Enter to http://localhost:3000 and log in with your Google account.
+2. On the [Firebase console](https://console.firebase.google.com/), go to your Firestore database.
+3. Select the `users` collection and then your user document (surely the only existing one).
+4. Change the value of the `role` field from `student` to `admin`.
+5. Go back to Plande (http://localhost:3000) and reload the page.
+
+Now you should see a menu button in the top left corner, next to the Plande "logo". From there, you can access to the pages for adding new _universities_, _colleges_, _degrees_ and _subjects_.
+
+## License
+
+[MIT](https://github.com/valentincostam/plande/blob/main/LICENSE) © [Valentín Costa](https://twitter.com/valentincostam)
