@@ -1,13 +1,12 @@
 # Plande
 
-<img align="right" width="300" src="plande-demo.gif" style="margin-left: 20px">
-
 Keep track of your college degree progress.
 
 [plande.app](https://plande.app
 )
 ## 📜 Description
 
+<img align="right" width="300" src="plande-demo.gif" style="margin-left: 20px">
 
 Plande is your college degree curriculum made simple and interactive.
 
