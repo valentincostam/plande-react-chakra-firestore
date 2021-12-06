@@ -6,7 +6,7 @@ Keep track of your college degree progress.
 )
 ## 📜 Description
 
-<img align="right" width="300" src="plande-demo.gif" style="margin-left: 20px">
+<img align="right" width="200" src="plande-demo.gif" style="margin-left: 20px; margin-bottom: 20px;">
 
 Plande is your college degree curriculum made simple and interactive.
 
