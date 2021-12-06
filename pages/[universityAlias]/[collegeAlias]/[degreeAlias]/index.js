@@ -239,6 +239,7 @@ export async function getStaticProps(context) {
 
   return {
     props: { degree, subjects },
+    revalidate: 60,
   };
 }
 
