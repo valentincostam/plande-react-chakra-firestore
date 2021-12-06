@@ -10,10 +10,10 @@ Keep track of your college degree progress.
 
 Plande is your college degree curriculum made simple and interactive.
 
-By letting you mark whether you have passed the courses of your degree, it helps you to:
+By letting you mark whether you have passed your degree's courses, it helps you to:
 
 - 📏 Keep track of your progress, showing your degree completion percentage.
-- 🧮 Know your current weekly classload, the number of passed courses, and other stats.
+- 🧮 Know what courses you can attend, your current weekly classload, the number of passed courses, and other stats.
 - 📅 Plan and organize yourself ahead of time by allowing you to simulate possible scenarios.
 - 💪 Motivate yourself by showing you how far got and how much is left.
 - 🫂 Share your achievements with non-academic people by having a minimalist and user-friendly interface.
@@ -51,11 +51,8 @@ multi-platform sign-in
 2. Set up Firebase:
 
     1. [Create a Firebase project](https://firebase.google.com/docs/web/setup#create-project) and [register a new web app](https://firebase.google.com/docs/web/setup#register-app).
-
     2. [Generate a new private key file for the Firebase Admin SDK](https://firebase.google.com/docs/admin/setup#initialize-sdk).
-
     3. [Enable Google Sign-In](https://firebase.google.com/docs/auth/web/google-signin#before_you_begin) in the Firebase console.
-
     4. [Create a Cloud Firestore database](https://firebase.google.com/docs/firestore/quickstart#create) (in _Test mode_ or use the rules in the `firestore.rules` file.)
 
 3. Copy the `API_KEY`, `AUTH_DOMAIN` and `PROJECT_ID` values from the [Firebase Web SDK config object](https://firebase.google.com/docs/web/learn-more#config-object) and paste them in the `.env.template` file.
