@@ -12,7 +12,7 @@ Plande is your college degree curriculum made simple and interactive.
 
 By letting you mark whether you have passed your degree's courses, it helps you to:
 
-- 📏 Keep track of your progress, showing your degree completion percentage.
+- 📏 Measure your progress toward degree completion.
 - 🧮 Know what courses you can attend, your current weekly classload, the number of passed courses, and other stats.
 - 📅 Plan and organize yourself ahead of time by allowing you to simulate possible scenarios.
 - 💪 Motivate yourself by showing you how far got and how much is left.
@@ -33,6 +33,67 @@ for production
 multi-platform sign-in
 - [Cloud Firestore](https://firebase.google.com/docs/firestore) - NoSQL database built for global apps
 - [Vercel](https://vercel.com/docs) - Platform for frontend frameworks and static sites
+
+## 🤔 ~~Frequently Asked~~ Questions
+
+<details>
+  <summary><strong>What motivated you to build this app? Is it really worth your time? Keeping track of degree progress doesn't seem a huge deal.</strong></summary>
+
+  After years wondering about that, I came to the following:
+
+  In my experience, knowing what college courses you can attend is not easy. I met fellow students that would say that is even hard. And that's a problem, maybe a small one, but a problem after all.
+
+  I love to solve problems.
+
+  Even though I didn't know how to do it, I strongly believed I could solve this one. That was a challenge.
+
+  I enjoy challenges.
+
+  And that's the main reason why I started this project.
+
+  On top of that, it's a great excuse to learn technologies I find interesting. Shows how much I like to build things as well.
+
+  Of course, I also think college students will find it useful. Plande will hardly change their lives though.
+</details>
+
+
+<details>
+  <summary><strong>Ok, cool but, is it worth MY time?</strong></summary>
+  
+  Probably not. But, if you're a college student, you've experienced the struggle with curriculums. This is your opportunity to make them awesome. Your classmates will thank you.
+  
+  I'm also sure that you will learn one or two things working on it, no matter how experience you have. If not, at least we'll meet each other.
+  
+  Please, don't hesitate to contribute to the project.
+</details>
+
+<details>
+  <summary><strong>Why did you choose that stack?</strong></summary>
+  
+  I wanted to learn more about those technologies. Also, they're really popular. That means tons of resources for learning and troubleshooting. Hopefully, there are more people willing to help me out or contribute to the project too.
+</details>
+
+<details>
+  <summary><strong>Who is Plande built for?</strong></summary>
+  
+  It's for every student attending some of the colleges supported by the app.
+</details>
+
+<details>
+  <summary><strong>What colleges does it support?</strong></summary>
+  
+  At the moment, Plande has been developed (but not tested) to support [UTN FRCU](https://www.frcu.utn.edu.ar/), [UADER FCyT](https://fcytcdelu.uader.edu.ar/), [UCU FAU](https://ucu.edu.ar/fau/), and any other college whose curriculums are like those from the mentioned colleges.
+  
+  Eventually, more will be supported, but it's not a priority right now.
+</details>
+
+<details>
+  <summary><strong>Why are code and docs in English but the UI texts in Spanish? Does Plande have i18n support?</strong></summary>
+  
+  Because English is a universal language and I want to improve my communication skill with it (and you should probably do it too), but the app is intended for Spanish-speaking colleges.
+  
+  And no, it doesn't have i18n support yet.
+</details>
 
 ## 💻 Running the project locally
 
