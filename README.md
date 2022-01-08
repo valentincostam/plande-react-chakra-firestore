@@ -34,43 +34,26 @@ multi-platform sign-in
 - [Cloud Firestore](https://firebase.google.com/docs/firestore) - NoSQL database built for global apps
 - [Vercel](https://vercel.com/docs) - Platform for frontend frameworks and static sites
 
-## 🤔 ~~Frequently Asked~~ Questions
+## 🤔 Frequently Asked Questions
 
 <details>
-  <summary><strong>What motivated you to build this app? Is it really worth your time? Keeping track of degree progress doesn't seem a huge deal.</strong></summary>
+  <summary><strong>What motivated you to build this app?</strong></summary>
 
-  After years wondering about that, I came to the following:
+  Back when I was in college, I always found my degree curriculum confusing. Looking at it, it was unclear what courses I could attend after passing others. I had to carefully follow a bunch of numbers (course codes) and double-check that I wasn't mistaken. And I knew that my fellow students experienced the same. So I thought there should be a better way to go through this process and that a web app could be the solution.
 
-  In my experience, knowing what college courses you can attend is not easy. I met fellow students that would say that is even hard. And that's a problem, maybe a small one, but a problem after all.
+  Months later, I released [isi](https://github.com/valentincostam/isi). You can watch a talk I give about it (in Spanish) on [YouTube](https://www.youtube.com/watch?v=twdmSBxbmp8), where I share a little more about the problem and my experience building it.
 
-  I love to solve problems.
-
-  Even though I didn't know how to do it, I strongly believed I could solve this one. That was a challenge.
-
-  I enjoy challenges.
-
-  And that's the main reason why I started this project.
-
-  On top of that, it's a great excuse to learn technologies I find interesting. Shows how much I like to build things as well.
-
-  Of course, I also think college students will find it useful. Plande will hardly change their lives though.
-</details>
-
-
-<details>
-  <summary><strong>Ok, cool but, is it worth MY time?</strong></summary>
-  
-  Probably not. But, if you're a college student, you've experienced the struggle with curriculums. This is your opportunity to make them awesome. Your classmates will thank you.
-  
-  I'm also sure that you will learn one or two things working on it, no matter how experience you have. If not, at least we'll meet each other.
-  
-  Please, don't hesitate to contribute to the project.
+  On top of that, it was a great excuse to learn technologies I find interesting. It shows how much I love to build things as well.
 </details>
 
 <details>
   <summary><strong>Why did you choose that stack?</strong></summary>
   
-  I wanted to learn more about those technologies. Also, they're really popular. That means tons of resources for learning and troubleshooting. Hopefully, there are more people willing to help me out or contribute to the project too.
+  Mostly because I wanted to learn those technologies. As they're really popular, there are ton of resources for learning and troubleshooting, which is always good.
+
+  Also, since degrees curriculums doesn't change that often, it made sense to me to learn about a SSG (Static Site Generator) like Next.js.
+
+  What do you think? What stack would you have chosen? [Let me know!](https://twitter.com/valentincostam)
 </details>
 
 <details>
