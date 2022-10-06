@@ -1,3 +1,7 @@
+:warning: This repository keeps an old and obsolete version of Plande. Please, go to [this repository](https://github.com/valentincostam/plande) if you want to see the current version's code.
+
+---
+
 # Plande
 
 Keep track of your college degree progress.
